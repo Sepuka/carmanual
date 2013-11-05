@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.CheckBox;
-import app.carmanual.R;
+import android.content.ContentValues;
+import android.content.ContentResolver;
+import android.net.Uri;
 
 public class MainActivity extends Activity
 {
@@ -16,7 +18,11 @@ public class MainActivity extends Activity
         //setContentView(R.layout.main);
         //TODO: Получить список файлов из папки и выдать их списком для выбора
         TextView tv = new TextView(this);
-        String string = "some text кириллица".concat(this.getString(R.string.app_name));
+        //ContentValues values = new ContentValues();
+        //values.put("key", "my value");
+        //ContentResolver cr = this.getContentResolver();
+        //Uri newUri = cr.insert(Uri.parse("content://app.carmanual.testdb"), values);
+        String string = "some text кириллица";
         tv.setText(string);
         CheckBox checkbox = new android.widget.CheckBox(this);
     }
